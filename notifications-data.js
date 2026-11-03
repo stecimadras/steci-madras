@@ -1,0 +1,1 @@
+window.NOTIFICATIONS_DATA = [];

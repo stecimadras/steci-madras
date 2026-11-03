@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>St. Thomas Evangelical Church of India – Madras Parish</title>
+<style>
+:root{--maroon:#6d1829;--wine:#4b1421;--gold:#b68b4c;--cream:#fbf8f3;--ink:#262421;--muted:#756e68;--line:#e8dfd5;--green:#365b4b}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
+header{background:linear-gradient(120deg,var(--wine),var(--maroon));color:#fff;padding:22px max(20px,calc((100% - 1120px)/2));}
+.brand{display:flex;align-items:center;gap:16px}.brand img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:50%;padding:5px}.brand h1{font-size:clamp(18px,3vw,27px);line-height:1.15;margin:0;letter-spacing:.04em}.brand p{margin:5px 0 0;color:#f0dfe0;font:13px Arial,sans-serif}
+nav{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;font:14px Arial,sans-serif}nav a{color:#fff;text-decoration:none;opacity:.9}nav a:hover{text-decoration:underline}
+main{max-width:1120px;margin:30px auto;padding:0 20px}.hero{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;grid-template-columns:1.3fr .7fr;gap:20px;box-shadow:0 8px 28px #4020190a}
+.eyebrow{color:var(--gold);font:700 11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}.hero h2{font-size:clamp(26px,4vw,38px);color:var(--maroon);line-height:1.12;margin:8px 0}.hero p{color:var(--muted);margin:0}#greeting{font-size:clamp(19px,2.5vw,25px);line-height:1.25}.datebox{background:#f5eee7;border-radius:16px;padding:18px;align-self:stretch;display:flex;flex-direction:column;justify-content:center}.datebox label{font:12px Arial,sans-serif;color:var(--muted);margin-bottom:6px}.datebox input{width:100%;padding:11px;border:1px solid #d9cbbd;border-radius:9px;background:#fff;font:15px Arial,sans-serif;color:var(--ink)}
+.section-title{display:flex;align-items:center;gap:12px;margin:30px 0 14px}.section-title h3{margin:0;color:var(--maroon);font-size:23px}.section-title span{height:1px;background:var(--line);flex:1}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px}.card h4{margin:0 0 9px;color:var(--maroon);font-size:18px}.item{padding:9px 0;border-top:1px solid #f0ebe5}.item:first-of-type{border-top:0}.time{display:inline-block;min-width:92px;color:var(--gold);font:700 12px Arial,sans-serif}.muted{color:var(--muted);font-size:14px}.tag{display:inline-block;border-radius:99px;background:#f4e9e9;color:var(--maroon);padding:3px 9px;font:700 10px Arial,sans-serif;letter-spacing:.04em;margin:0 5px 5px 0}
+.people{columns:2;column-gap:24px;margin:0;padding:0;list-style:none}.people li{break-inside:avoid;padding:6px 0;border-bottom:1px solid #f1ece7;font-size:14px}.people b{color:var(--maroon);font:700 12px Arial,sans-serif;display:inline-block;width:58px}
+.notice{background:#f5eee7;border-left:4px solid var(--gold);padding:13px 15px;border-radius:8px;color:#51483f;font-size:14px}
+button,.button{display:inline-block;border:0;border-radius:9px;padding:11px 16px;background:var(--maroon);color:white;text-decoration:none;font:700 13px Arial,sans-serif;cursor:pointer}button.secondary,.button.secondary{background:#f1e9e1;color:var(--maroon)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+footer{margin-top:42px;background:var(--wine);color:#f5e9e4;padding:25px 20px;text-align:center;font:13px Arial,sans-serif}footer strong{font-family:Georgia,serif;font-size:16px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.people{columns:1}.brand img{width:60px;height:60px}main{margin:18px auto}}
+/* Refined parish palette and accessible colourful event cards */
+:root{--maroon:#751e38;--wine:#42182e;--gold:#a97728;--cream:#fffaf2;--ink:#2c2530;--muted:#615966;--line:#e8d9cb}
+header{background:linear-gradient(115deg,#43172d,#7e2343 68%,#9b5a38)}
+.brand{min-width:0}.brand>div{min-width:0;flex:1}.brand h1{white-space:nowrap;font-family:Arial,sans-serif;font-weight:800;letter-spacing:-.025em;font-size:clamp(9px,2.4vw,26px)}
+.brand p{font-size:clamp(10px,1.3vw,13px)}nav{gap:14px}nav a{padding:8px 10px;border-radius:7px}nav a:hover,nav a:focus-visible{background:#ffffff25;text-decoration:none}
+.hero{background:linear-gradient(125deg,#fff,#fff9f0)}.datebox{background:#f8ebd9}.card{box-shadow:0 4px 20px #42182e08}
+#upcoming+section{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border:0;padding:0;background:transparent;box-shadow:none}
+#upcoming+section .item{border:1px solid #ead8c3;border-radius:14px;padding:16px;background:#fff1dc;box-shadow:0 3px 12px #42182e0b}
+#upcoming+section .item:nth-child(2){background:#e9f5f2;border-color:#c7e6dd}#upcoming+section .item:nth-child(3){background:#f7eaf4;border-color:#e9cfe0}#upcoming+section .item:nth-child(4){background:#e9effb;border-color:#d3def5}#upcoming+section .item:nth-child(5){background:#fff2ec;border-color:#f0d5c6}#upcoming+section .item:nth-child(6){background:#f0ebfa;border-color:#dcd0ee}
+.new-badge{background:#c62828;color:#fff;font:800 10px Arial,sans-serif;border-radius:4px;padding:3px 6px;animation:pulse 1s steps(2,start) infinite}@keyframes pulse{50%{opacity:.25}}.new-badge[hidden]{display:none}
+@media(max-width:720px){.brand{gap:8px}.brand img{width:42px;height:42px;padding:2px}.brand h1{font-size:clamp(8px,2.35vw,16px)}#upcoming+section{grid-template-columns:1fr}header{padding:18px 12px}nav{gap:4px}nav a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.new-badge{animation:none}}
+@media print{nav,.datebox,.actions,footer{display:none}.hero,.card{box-shadow:none}}
+/* Expandable archive years; existing parish colours and layout retained */
+.archive-year{border:1px solid var(--line);border-radius:11px;margin:0 0 12px;overflow:hidden;background:#fff}
+.archive-year summary{cursor:pointer;list-style:none;padding:14px 16px;color:var(--maroon);font:700 19px Georgia,serif;display:flex;align-items:center;justify-content:space-between}
+.archive-year summary::-webkit-details-marker{display:none}
+.archive-year summary::after{content:"+";font:700 23px Arial,sans-serif;color:var(--gold)}
+.archive-year[open] summary::after{content:"−"}
+.archive-year summary:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.archive-year .archive-issues{padding:0 16px 14px;border-top:1px solid var(--line)}
+.archive-year .archive-issues .item:first-child{border-top:0}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><img src="church-logo.jpeg" alt="St. Thomas Evangelical Church of India logo"><div><h1>ST. THOMAS EVANGELICAL CHURCH OF INDIA</h1><p>MADRAS PARISH · #36, Pillaiyar Koil Street, Thirumangalam, Anna Nagar West, Chennai – 600 040</p></div></div>
+ <nav><a href="#today">Daily Bulletin</a><a href="#birthdays">Birthdays</a><a href="#anniversaries">Anniversaries</a><a href="#schedule">Regular Meetings</a><a href="#upcoming">Upcoming Events</a><a href="#newsletter">Quarterly Newsletter</a><a href="#archives">Archives</a><a href="#notifications">Notifications <span id="newBadge" class="new-badge" hidden>NEW</span></a></nav>
+</header>
+<main>
+ <section class="hero" id="today">
+  <div><div class="eyebrow">Madras Parish · Daily Church Bulletin</div><h2 id="greeting">Church Activities</h2><p id="dateText">Select a date to view the church programme, birthdays and prayer information for that day.</p><div class="actions"><button class="secondary" id="todayBtn">Show today</button></div></div>
+  <div class="datebox"><label for="datePicker">CHOOSE A DATE</label><input id="datePicker" type="date" ><p id="bulletinPeriod" class="muted" style="margin:9px 0 0">Loading bulletin period…</p></div>
+ </section>
+ <div class="section-title"><h3>Activities for this date</h3><span></span></div>
+ <section class="cards">
+  <article class="card"><h4>Church programme</h4><div id="activities"></div></article>
+  <article class="card"><h4>Worship Service</h4><div id="worship"></div></article>
+ </section>
+<div class="section-title" id="birthdays"><h3>Birthdays</h3><span></span></div>
+ <section class="card"><p id="birthdayDate" class="eyebrow"></p><div id="birthdayList"></div></section>
+ <div class="section-title" id="anniversaries"><h3>Wedding Anniversaries</h3><span></span></div>
+ <section class="card"><p id="anniversaryDate" class="eyebrow"></p><div id="anniversaryList"></div></section>
+ <div class="section-title" id="schedule"><h3>Regular weekly meetings</h3><span></span></div>
+ <section class="cards">
+  <article class="card"><h4>Sunday</h4><div id="sundayMeetings">Loading…</div></article>
+  <article class="card"><h4>Weekday meetings</h4><div id="weekdayMeetings">Loading…</div></article>
+ </section>
+ <div class="section-title" id="upcoming"><h3>Upcoming Events</h3><span></span></div>
+ <section class="card" id="upcomingItems"><p class="muted">Loading events…</p></section>
+ <div class="section-title" id="newsletter"><h3>Quarterly newsletter</h3><span></span></div>
+ <section class="card">
+  <div class="eyebrow">Current edition</div><h4 id="editionTitle">Loading bulletin…</h4><p class="muted">Read the original bulletin, including the Vicar's message and complete worship schedules.</p>
+  <div class="actions"><a class="button" href="current-bulletin.pdf" target="_blank" rel="noopener">Read PDF bulletin</a><a class="button secondary" href="current-bulletin.pdf" download>Download PDF</a></div>
+ </section>
+ <div class="section-title" id="archives"><h3>Bulletin Archives</h3><span></span></div>
+ <section class="card" id="archiveList"><p class="muted">No archived bulletins available.</p></section>
+ <div class="section-title" id="notifications"><h3>Parish notifications</h3><span></span></div>
+ <section class="card"><div id="notificationList"><p class="muted">Loading announcements…</p></div></section>
+</main>
+<footer><strong>St. Thomas Evangelical Church of India – Madras Parish</strong><br>“I am the way, the truth, and the life.”<br><span id="footerPeriod" style="opacity:.75">Parish Bulletin</span><br>Vicar - Rev. Prakash Thomas</footer>
+<!-- ARCHIVE_DATA_START -->
+<script>window.ARCHIVE_DATA = [{"year": 2026, "label": "November – December 2026", "path": "archives/2026/bulletin-nov-dec-2026.pdf"}];</script>
+<!-- ARCHIVE_DATA_END -->
+<!-- BULLETIN_DATA_START -->
+<script>window.BULLETIN_DATA = {"period": "November – December 2026", "year": 2026, "start": "2026-11-01", "end": "2026-12-31", "birthdays": {"2026-11-02": ["Eva Shinoj"], "2026-11-06": ["Nathan Gene Philip", "Divya Winnie"], "2026-11-11": ["Sheeba Thomas"], "2026-11-12": ["Jovan Cherian Tity"], "2026-11-15": ["Joel John"], "2026-11-16": ["Jibi C Yohannan", "Nisha Jacob"], "2026-11-17": ["Princy Chris"], "2026-11-18": ["Joanna Ann Rahul"], "2026-11-19": ["Nissy Philip"], "2026-11-27": ["Sherin Tity"], "2026-11-28": ["Divya Abel"], "2026-11-30": ["Jobin Philip Sajan"], "2026-12-02": ["Kevin M Vibin"], "2026-12-05": ["Aaron Jibi Yohannan"], "2026-12-07": ["Evg. Ajimon"], "2026-12-17": ["Roney Jacob Mathew"], "2026-12-18": ["Sheeba Gijo", "Christy Johnson"], "2026-12-20": ["Christa Ann Gijo"], "2026-12-23": ["Joshua Thomas Aby"], "2026-12-26": ["Capt. T M Cherian"]}, "anniversaries": {"2026-11-08": ["Mr. Rahul George Mathew & Blessy Rahul"], "2026-11-17": ["Mr. Shinoj C Jose & Smera Shinoj"], "2026-11-19": ["Mr. Gijo Thomas & Sheeba Gijo"], "2026-11-27": ["Mr. Johnson Thomas & Biji Johnson"], "2026-11-28": ["Mr. Nibu Koshy & Mini Nibu"], "2026-12-21": ["Mr. Abel Abraham Cherian & Alma Mariyam Mathew"], "2026-12-26": ["Mr. Roney Jacob Mathew & Sumi Roney", "Mr. Evg. Ajimon & Angel A"], "2026-12-27": ["Mr. Ashish Mathew George & Reshma Achu Joseph"], "2026-12-29": ["Mr. Tald Mathew George & Nisha Tald Mathew"]}, "services": {"2026-11-01": {"title": "MISSIONARY SUNDAY · MALAYALAM SERVICE", "service": "Malayalam Service", "theme": "If I Do Not Preach the Gospel", "praise": "Dr. Aby Alexandar", "r1": "Isaiah 49:1-21 · MV 6", "r1by": "Winnie Cherian", "r2": "I Cor. 9:1-27 · MV 16", "r2by": "Divya Winnie", "prayer": "Sheeba Thomas"}, "2026-11-08": {"title": "SENIOR CITIZEN SUNDAY · MALAYALAM SERVICE · HOLY COMMUNION", "service": "Malayalam Service · Holy Communion", "theme": "Be Faithful in God’s House", "praise": "V V Cherian", "r1": "Num. 12:1-16 · MV 7", "r1by": "A C Chacko", "r2": "Heb. 3:1-19 · MV 2", "r2by": "Jacob Thomas", "prayer": "Jacob Mathew"}, "2026-11-15": {"title": "PRAYER SUNDAY · MALAYALAM SERVICE", "service": "Malayalam Service", "theme": "Cost of Discipleship", "praise": "Nisha Jacob", "r1": "1 Kings 19:1-21 · MV 21", "r1by": "Rahul George Mathew", "r2": "1 Thess. 2:1-20 · MV 8", "r2by": "Christa Gijo", "prayer": "Gijo Thomas"}, "2026-11-22": {"title": "ENGLISH SERVICE · HOLY COMMUNION", "service": "English Service · Holy Communion", "theme": "People of God Step Forward by Faith", "praise": "Jonathan Alex Aby", "r1": "Josh. 3:1-17 · MV 5", "r1by": "Prince Nibu", "r2": "Heb. 11:1-31 · MV 29", "r2by": "Feba Susan Jibi", "prayer": "Steve Prakash"}, "2026-11-29": {"title": "COMBINED SERVICE · HOLY COMMUNION", "service": "Combined Service", "theme": "A New Heart", "praise": "Rev. Ajimon", "r1": "Ezek. 36:16-38 · MV 26", "r1by": "Jobin P Sajan", "r2": "Eph. 4:1-24 · MV 23, 24", "r2by": "Aruna", "prayer": "Ramchandran"}, "2026-12-06": {"title": "POOR AID · MALAYALAM SERVICE", "service": "Malayalam Service", "theme": "Consider the Poor", "praise": "Jobin P Sajan", "r1": "Lev. 25:18-38 · MV 35", "r1by": "Aaron Jibi Yohannan", "r2": "James 2:1-17 · MV 15, 16", "r2by": "Varsha Vibin", "prayer": "Jibi C Yohannan"}, "2026-12-13": {"title": "MALAYALAM SERVICE · HOLY COMMUNION", "service": "Malayalam Service · Holy Communion", "theme": "Give the Right Hand of Fellowship", "praise": "Roney Jacob Mathew", "r1": "Dan. 2:1-23 · MV 17, 18", "r1by": "Joshua Thomas Aby", "r2": "Gal. 2:1-21 · MV 9", "r2by": "Angelin Susan Roney", "prayer": "Sheeba Gijo"}, "2026-12-20": {"title": "PRAYER SUNDAY · MALAYALAM SERVICE", "service": "Malayalam Service", "theme": "The Word Became Flesh", "praise": "Stegin Thomas", "r1": "Isaiah 7:1-17 · MV 14", "r1by": "Tald Mathew", "r2": "Heb. 2:1-18 · MV 14, 15", "r2by": "Abigail Prakash", "prayer": "Sumi Roney"}, "2026-12-25": {"title": "CHRISTMAS SERVICE", "service": "Christmas Service", "theme": "Prince of Peace", "r1": "Isaiah 9:1-10 · MV 6, 7", "r1by": "Susan K Varghese", "r2": "Luke 2:1-20 · MV 14", "r2by": "Princely Stephen", "prayer": "Chris Cherian"}, "2026-12-27": {"title": "ANNUAL FELLOWSHIP MEETING", "service": "Annual Fellowship Meeting", "theme": "Repent, Rest and Trust", "praise": "L. Mathewkutty", "r1": "Isaiah 30:1-26 · MV 15", "r1by": "Jacob Thomas", "r2": "Rev. 2:1-11 · MV 5", "r2by": "Nisha Jacob", "prayer": "Robin Mathew"}, "2026-12-31": {"title": "WATCH NIGHT SERVICE", "service": "Watch Night Service", "theme": "Unchanging God", "r1": "Mal. 3:1-18 · MV 6", "r1by": "Sajan Philip", "r2": "Heb. 13:1-17 · MV 5", "r2by": "Mable Elizabeth Thomas"}}, "events": {"2026-11-22": ["Sunday School Annual Exam"], "2026-12-05": ["Christmas Carol Service 6:30 PM"], "2026-12-25": ["Christmas Service 7:30 AM"], "2026-12-31": ["Watch Night Service 9:30 PM"]}, "undatedEvents": ["Christmas Outreach", "Carol House Visits"], "meetings": {"sunday": [{"name": "Tamil", "time": "7:30 – 9:00 AM"}, {"name": "Malayalam / English", "time": "9:00 – 11:30 AM"}, {"name": "Sunday School", "time": "8:00 – 9:00 AM"}, {"name": "Youth Meeting", "time": "11:15 AM – 12:00 PM"}], "weekday": [{"name": "Online Prayer · Alternate Fridays", "time": "8:30 – 9:30 PM"}, {"name": "Ladies Meeting · Thursdays", "time": "7:00 – 8:00 PM"}, {"name": "Cottage Prayer Meeting", "time": "SATURDAYS · 6:30 – 8:00 PM"}], "cottageDates": [{"date": "2026-11-14", "person": "Rev. Dr. John M Prasad"}]}};</script>
+<!-- BULLETIN_DATA_END -->
+<script>
+(function(){
+ const host=document.getElementById('archiveList');
+ const entries=Array.isArray(window.ARCHIVE_DATA)?window.ARCHIVE_DATA:[];
+ if(!host)return;
+ host.replaceChildren();
+ if(!entries.length){const p=document.createElement('p');p.className='muted';p.textContent='No archived bulletins available.';host.append(p);return;}
+ const groups=new Map();
+ for(const e of entries){if(!groups.has(e.year))groups.set(e.year,[]);groups.get(e.year).push(e);}
+ for(const [year,items] of [...groups].sort((a,b)=>b[0]-a[0])){
+   const yearGroup=document.createElement('details');yearGroup.className='archive-year';
+   const heading=document.createElement('summary');heading.textContent=String(year);heading.setAttribute('aria-label','Show or hide archived bulletins for '+year);yearGroup.append(heading);
+   const issues=document.createElement('div');issues.className='archive-issues';
+   for(const e of items.sort((a,b)=>b.label.localeCompare(a.label))){
+     const item=document.createElement('div');item.className='item';
+     const title=document.createElement('b');title.textContent=e.label;item.append(title);
+     const actions=document.createElement('div');actions.className='actions';
+     for(const [caption,download] of [['Open PDF',false],['Download PDF',true]]){
+       const a=document.createElement('a');a.className=download?'button secondary':'button';
+       a.textContent=caption;a.href=e.path;if(download)a.setAttribute('download','');
+       else {a.target='_blank';a.rel='noopener';}actions.append(a);
+     }
+     item.append(actions);issues.append(item);
+   }
+   yearGroup.append(issues);host.append(yearGroup);
+ }
+})();
+</script>
+<script src="notifications-data.js"></script>
+<script>
+let birthdays={}, anniversaries={}, sundays={}, events={}, cottageDates={};
+let bulletinPeriod='', bulletinStart='', bulletinEnd='';
+function loadBulletin(){
+ try {
+  const data=window.BULLETIN_DATA;
+  if(!data)throw Error('bulletin data unavailable');
+  if(!data.services||!data.birthdays||!data.anniversaries||!data.events||!data.period)throw Error('invalid bulletin data');
+  sundays=data.services;events=data.events;
+  birthdays={};anniversaries={};
+  for(const [d,names] of Object.entries(data.birthdays)) birthdays[d.slice(5)]=names;
+  for(const [d,names] of Object.entries(data.anniversaries)) anniversaries[d.slice(5)]=names;
+  bulletinPeriod=data.period;bulletinStart=data.start;bulletinEnd=data.end;
+  for(const [key,id] of [['sunday','sundayMeetings'],['weekday','weekdayMeetings']]){
+   document.getElementById(id).innerHTML=(data.meetings?.[key]||[]).map(m=>`<div class="item"><span class="time">${esc(m.time)}</span> ${esc(m.name)}</div>`).join('');
+  }
+  cottageDates={};
+  for(const meeting of (data.meetings?.cottageDates||[])){
+   if(meeting.date) (cottageDates[meeting.date] ||= []).push(meeting);
+  }
+  document.getElementById('bulletinPeriod').textContent='Bulletin period: '+data.period;
+  document.getElementById('editionTitle').textContent='Parish Bulletin · '+data.period;
+  document.getElementById('footerPeriod').textContent='Parish Bulletin · '+data.period;
+  const upcoming=document.getElementById('upcomingItems');
+  const all=Object.entries(events).flatMap(([day,items])=>items.map(item=>({day,item}))).sort((a,b)=>a.day.localeCompare(b.day));
+  const ord=d=>ordinal(Number(d.slice(8)))+' '+new Date(d+'T12:00:00').toLocaleDateString('en-IN',{month:'long'});
+  upcoming.innerHTML=all.map(({day,item})=>`<div class="item"><b>${esc(ord(day))}</b> · ${esc(item)}</div>`).join('')+
+    (data.undatedEvents||[]).map(item=>`<div class="item"><b>Date to be announced</b> · ${esc(item)}</div>`).join('');
+  render(document.getElementById('datePicker').value);
+ } catch(error){
+  document.getElementById('bulletinPeriod').textContent='Bulletin data could not be loaded';
+  document.getElementById('activities').innerHTML='<p class="muted">Bulletin data unavailable. Please check the PDF and site update status.</p>';
+ }
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function ordinal(n){const v=n%100;return n+((v>=11&&v<=13)?"th":({1:"st",2:"nd",3:"rd"}[n%10]||"th"));}
+function longDate(d){return d.toLocaleDateString("en-IN",{weekday:"long"})+", "+ordinal(d.getDate())+" "+d.toLocaleDateString("en-IN",{month:"long",year:"numeric"});}
+function shortDate(d){return ordinal(d.getDate())+" "+d.toLocaleDateString("en-IN",{month:"long"});}
+function render(date){
+ const d=new Date(date+"T12:00:00"); const key=date.slice(5); const weekday=d.getDay();
+ document.getElementById("greeting").textContent="Church Activities";
+ document.getElementById("dateText").textContent=longDate(d);
+ let acts=[];
+ if(sundays[date]) acts.push(`<div class="item"><span class="tag">WORSHIP SERVICE</span><br><b>${esc(sundays[date].title)}</b><div class="muted">${esc(sundays[date].service)}</div></div>`);
+ if(cottageDates[date]) cottageDates[date].forEach(m=>acts.push(`<div class="item"><b>Cottage Prayer Meeting</b>${m.person?` · ${esc(m.person)}`:""}</div>`));
+ if(events[date]) events[date].forEach(x=>acts.push(`<div class="item">${esc(x)}</div>`));
+ document.getElementById("activities").innerHTML=acts.length?acts.join(""):'<p class="muted">No specific dated activity is listed in this bulletin for this date. See the regular meeting schedule below.</p>';
+ const w=sundays[date];
+ document.getElementById("worship").innerHTML=w?`<div class="item"><span class="tag">${esc(w.service)}</span><p><b>Theme:</b> ${esc(w.theme)}</p>${w.praise?`<p><b>Praise & Worship:</b> ${esc(w.praise)}</p>`:""}<p><b>Reading 1:</b> ${esc(w.r1)} <span class="muted">— ${esc(w.r1by)}</span></p><p><b>Reading 2:</b> ${esc(w.r2)} <span class="muted">— ${esc(w.r2by)}</span></p>${w.prayer?`<p><b>Intercessory Prayer:</b> ${esc(w.prayer)}</p>`:""}</div>`:'<p class="muted">No date-specific worship assignment is listed for this date.</p>';
+ document.getElementById("birthdayDate").textContent=shortDate(d);document.getElementById("anniversaryDate").textContent=shortDate(d);
+ const b=birthdays[key]||[];document.getElementById("birthdayList").innerHTML=b.length?`<ul class="people">${b.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:'<p class="muted">No birthday is listed for this date in the bulletin.</p>';
+ const a=anniversaries[key]||[];document.getElementById("anniversaryList").innerHTML=a.length?`<ul class="people">${a.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:'<p class="muted">No wedding anniversary is listed for this date in the bulletin.</p>';
+}
+const picker=document.getElementById("datePicker");
+const today=new Date();const todayISO=[today.getFullYear(),String(today.getMonth()+1).padStart(2,"0"),String(today.getDate()).padStart(2,"0")].join("-");picker.value=todayISO;
+picker.addEventListener("change",()=>render(picker.value));
+document.getElementById("todayBtn").addEventListener("click",()=>{const now=new Date();picker.value=[now.getFullYear(),String(now.getMonth()+1).padStart(2,"0"),String(now.getDate()).padStart(2,"0")].join("-");render(picker.value)});
+loadBulletin();
+function loadNotifications(){const target=document.getElementById("notificationList");try{const notices=window.NOTIFICATIONS_DATA||[];if(!Array.isArray(notices))throw Error("invalid data");const valid=notices.filter(n=>n&&n.title&&n.date&&/^\d{4}-\d{2}-\d{2}$/.test(n.date)).sort((a,b)=>b.date.localeCompare(a.date));const now=new Date();now.setHours(0,0,0,0);let showNew=false;target.innerHTML=valid.length?valid.map(n=>{const d=new Date(n.date+"T12:00:00");const days=Math.floor((now-new Date(n.date+"T00:00:00"))/86400000);const fresh=days>=0&&days<7;if(fresh)showNew=true;return `<div class="item"><b>${esc(n.title)}</b> ${fresh?'<span class="new-badge">NEW</span>':''}<div class="muted">${esc(longDate(d))}</div>${n.message?`<p>${esc(n.message)}</p>`:''}</div>`}).join(""):'<p class="muted">No announcements have been posted yet.</p>';document.getElementById("newBadge").hidden=!showNew;}catch(e){target.innerHTML='<p class="muted">Notifications could not be loaded.</p>';}}
+loadNotifications();
+</script>
+</body></html>
