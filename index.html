@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>St. Thomas Evangelical Church of India – Madras Parish</title>
+<meta name="theme-color" content="#751e38">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="STECI Madras">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <style>
 :root{--maroon:#6d1829;--wine:#4b1421;--gold:#b68b4c;--cream:#fbf8f3;--ink:#262421;--muted:#756e68;--line:#e8dfd5;--green:#365b4b}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
@@ -174,5 +181,13 @@ document.getElementById("todayBtn").addEventListener("click",()=>{const now=new 
 loadBulletin();
 function loadNotifications(){const target=document.getElementById("notificationList");try{const notices=window.NOTIFICATIONS_DATA||[];if(!Array.isArray(notices))throw Error("invalid data");const valid=notices.filter(n=>n&&n.title&&n.date&&/^\d{4}-\d{2}-\d{2}$/.test(n.date)).sort((a,b)=>b.date.localeCompare(a.date));const now=new Date();now.setHours(0,0,0,0);let showNew=false;target.innerHTML=valid.length?valid.map(n=>{const d=new Date(n.date+"T12:00:00");const days=Math.floor((now-new Date(n.date+"T00:00:00"))/86400000);const fresh=days>=0&&days<7;if(fresh)showNew=true;return `<div class="item"><b>${esc(n.title)}</b> ${fresh?'<span class="new-badge">NEW</span>':''}<div class="muted">${esc(longDate(d))}</div>${n.message?`<p>${esc(n.message)}</p>`:''}</div>`}).join(""):'<p class="muted">No announcements have been posted yet.</p>';document.getElementById("newBadge").hidden=!showNew;}catch(e){target.innerHTML='<p class="muted">Notifications could not be loaded.</p>';}}
 loadNotifications();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js', {scope:'./'})
+      .catch(error => console.warn('Offline support unavailable:', error));
+  });
+}
 </script>
 </body></html>

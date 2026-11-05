@@ -1,0 +1,25 @@
+{
+  "name": "St. Thomas Evangelical Church of India – Madras Parish",
+  "short_name": "STECI Madras",
+  "description": "Madras Parish daily bulletin, services, events, archives and announcements",
+  "id": "/steci-madras/",
+  "start_url": "/steci-madras/",
+  "scope": "/steci-madras/",
+  "display": "standalone",
+  "background_color": "#fffaf2",
+  "theme_color": "#751e38",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
