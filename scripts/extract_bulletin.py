@@ -40,6 +40,18 @@ def parse():
             if mm:
                 if j+1>=len(sub): fail(f'Missing entry after {sub[j]}')
                 result.setdefault(datekey(*mm.groups()),[]).append(sub[j+1]); j+=2
+            elif heading == 'Upcoming Events' and re.fullmatch(r'\d{1,2}(?:\s*[,＆&]\s*\d{1,2})+\s+[A-Za-z]{3}',sub[j]):
+                # One event may be printed against several dates, e.g. 11, 12 & 19 Dec.
+                if j+1>=len(sub): fail(f'Missing event after {sub[j]}')
+                dates, month = sub[j].rsplit(' ', 1)
+                days = [int(n) for n in re.findall(r'\d{1,2}', dates)]
+                if len(set(days)) != len(days): fail(f'Duplicate dates in event: {sub[j]}')
+                for day in days:
+                    key = datekey(day, month)
+                    # Check the day is valid for the actual calendar month.
+                    date.fromisoformat(key)
+                    result.setdefault(key, []).append(sub[j+1])
+                j+=2
             elif sub[j].upper()=='TBA':
                 if j+1>=len(sub): fail('Missing TBA description')
                 tba.append(sub[j+1]);j+=2
