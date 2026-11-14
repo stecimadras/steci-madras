@@ -2,7 +2,7 @@
 """Extract the parish's current *text-based, two-column-style* bulletin layout.
 Fail closed if format differs; never publish fabricated or partially parsed data.
 """
-import json, re, sys, calendar
+import json, re, sys, calendar, hashlib
 from pathlib import Path
 from datetime import date
 import fitz
@@ -124,8 +124,6 @@ def parse():
 if __name__=='__main__':
     try:
         data=parse()
-        OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-        OUT.with_suffix('.js').write_text('window.BULLETIN_DATA = '+json.dumps(data,ensure_ascii=False)+';\n',encoding='utf-8')
         # Embed refreshed data in HTML so local file previews work without fetch or external scripts.
         html_path=ROOT/'index.html'
         html=html_path.read_text(encoding='utf-8')
@@ -134,6 +132,20 @@ if __name__=='__main__':
         if html.count(start_marker)!=1 or html.count(end_marker)!=1:fail('Missing unique HTML data markers')
         inline=start_marker+'\n<script>window.BULLETIN_DATA = '+json.dumps(data,ensure_ascii=False).replace('<','\\u003c')+';</script>\n'+end_marker
         html=html[:html.index(start_marker)]+inline+html[html.index(end_marker)+len(end_marker):]
+        # Refresh only the two Current Bulletin PDF links. A content hash changes
+        # when the PDF changes, bypassing stale browser/CDN PDF caches.
+        # Archive links, PWA setup and all other page markup are untouched.
+        pdf_version=hashlib.sha256(PDF.read_bytes()).hexdigest()[:12]
+        pdf_link_pattern=r'(?P<prefix>href=[\"\'])(?P<path>(?:\./)?current-bulletin\.pdf)(?:\?v=[^\"\']*)?(?P<suffix>[\"\'])'
+        html, updated_links=re.subn(
+            pdf_link_pattern,
+            lambda m: m.group('prefix')+m.group('path')+'?v='+pdf_version+m.group('suffix'),
+            html,
+        )
+        if updated_links != 2:
+            fail(f'Expected 2 Current Bulletin PDF links; found {updated_links}. index.html was not updated.')
+        OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        OUT.with_suffix('.js').write_text('window.BULLETIN_DATA = '+json.dumps(data,ensure_ascii=False)+';\n',encoding='utf-8')
         html_path.write_text(html,encoding='utf-8')
         print(f"Extracted {len(data['services'])} services, {sum(map(len,data['birthdays'].values()))} birthdays, {sum(map(len,data['anniversaries'].values()))} anniversaries, {sum(map(len,data['events'].values()))} events")
     except Exception as e:
