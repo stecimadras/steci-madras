@@ -49,7 +49,7 @@
       "Aaron Jibi Yohannan"
     ],
     "2026-12-07": [
-      "Evg. Ajimon"
+      "Rev. Ajimon"
     ],
     "2026-12-17": [
       "Roney Jacob Mathew"
@@ -89,13 +89,14 @@
     ],
     "2026-12-26": [
       "Mr. Roney Jacob Mathew & Sumi Roney",
-      "Mr. Evg. Ajimon & Angel A"
+      "Rev. Ajimon & Angel A"
     ],
     "2026-12-27": [
       "Mr. Ashish Mathew George & Reshma Achu Joseph"
     ],
     "2026-12-29": [
-      "Mr. Tald Mathew George & Nisha Tald Mathew"
+      "Mr. Tald Mathew George & Nisha Tald Mathew",
+      "Mr. Benz C Alexander & Ritty Benz"
     ]
   },
   "services": {
@@ -222,7 +223,7 @@
     "2026-11-22": [
       "Sunday School Annual Exam"
     ],
-    "2026-12-05": [
+    "2026-12-06": [
       "Christmas Carol Service 6:30 PM"
     ],
     "2026-12-25": [
@@ -232,10 +233,7 @@
       "Watch Night Service 9:30 PM"
     ]
   },
-  "undatedEvents": [
-    "Christmas Outreach",
-    "Carol House Visits"
-  ],
+  "undatedEvents": [],
   "meetings": {
     "sunday": [
       {
